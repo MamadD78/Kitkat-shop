@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="css/login-style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <script src="https://kit.fontawesome.com/37fbe7bbce.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+ 
+    <div class="wrapper">
+        <span class="icon-close" onclick="myFunc()"><i class="fa-solid fa-xmark"></i></i></span>
+
+        <div class="form-box login">
+            <h2>ورود</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="email" required>
+                    <label>ایمیل یا شماره تلفن</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" required>
+                    <label>رمز عبور</label>
+                </div>
+                <div class="remember-forget">
+                    <label><input type="checkbox">مرا به خاطر بسپار</label>
+                    <a href="#">فراموشی رمز عبور؟</a>
+                </div>
+                <button type="submit" class="btn">ورود</button>
+                <div class="login-register">
+                    <p>ثبت نام نکردی؟<a href="#" class="register-link">ثبت نام</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>ثبت نام</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-user"></i></span>
+                    <input type="text" required>
+                    <label>نام کاربری</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="email" required>
+                    <label>ایمیل یا شماره تماس</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" required>
+                    <label>رمز</label>
+                </div>
+                <div class="remember-forget">
+                    <label><input type="checkbox">موافقت با شرایط و قوانین</label>
+                </div>
+                <button type="submit" class="btn">ثبت نام</button>
+                <div class="login-register">
+                    <p>قبلا ثبت نام کردی؟<a href="#" class="login-link">ورود</a></p>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <script src="js/app.js"></script>
+    <script>
+         //login-form
+        const wrapper = document.querySelector('.wrapper');
+        const loginLink = document.querySelector('.login-link');
+        const registerLink = document.querySelector('.register-link');
+        const btnPopup = document.querySelector('.btnLogin-popup');
+        const iconClose = document.querySelector('.icon-close');
+
+        registerLink.addEventListener('click', ()=> {
+            wrapper.classList.add('active');
+        })
+
+        loginLink.addEventListener('click', ()=> {
+            wrapper.classList.remove('active');
+        })
+
+        btnPopup.addEventListener('click', ()=> {
+            wrapper.classList.add('active-popup');
+        })
+
+        function myFunc() {
+            window.location.href = "Index.html";
+        }
+    </script>
+</body>
+</html>
